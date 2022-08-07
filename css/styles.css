@@ -153,7 +153,6 @@ img {
 
 .contacts-link {
 	color: var(--description-text-color);
-
 	display: inline-flex;
 	gap: 10px;
 	align-items: center;
@@ -169,7 +168,7 @@ img {
 .header-mail-icon,
 .header-tel-icon {
 	--icon-color: currentColor;
-	color: var(--icon-color);
+	fill: var(--icon-color);
 }
 
 /* .header-mail-link::before {
@@ -363,7 +362,7 @@ img {
 }
 .team-soc-icon {
 	--icon-color: currentColor;
-	color: var(--icon-color);
+	fill: var(--icon-color);
 }
 
 /* ------------clients------------ */
@@ -403,7 +402,7 @@ img {
 
 .clients-icon {
 	--icon-color: currentColor;
-	color: var(--icon-color);
+	fill: var(--icon-color);
 }
 
 /* ------------footer------------ */
@@ -494,9 +493,8 @@ img {
 }
 
 .footer-soc-icon {
-	display: block;
 	--icon-color: currentColor;
-	color: var(--icon-color);
+	fill: var(--icon-color);
 }
 
 /* ------------portfolio------------ */
