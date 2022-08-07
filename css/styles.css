@@ -344,10 +344,11 @@ img {
 	gap: 10px;
 }
 .team-soc-item {
-}
-.team-soc-link {
 	width: 44px;
 	height: 44px;
+}
+.team-soc-link {
+	height: 100%;
 	border-radius: 50%;
 	background-color: var(--main-background-color);
 	display: flex;
@@ -384,7 +385,6 @@ img {
 }
 
 .clients-link {
-	width: 100%;
 	height: 100%;
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
@@ -473,12 +473,12 @@ img {
 }
 
 .footer-soc-item {
+	width: 44px;
+	height: 44px;
 }
 
 .footer-soc-link {
-	display: block;
-	width: 44px;
-	height: 44px;
+	height: 100%;
 	border-radius: 50%;
 	background-color: #44454e;
 	color: var(--main-background-color);
