@@ -144,7 +144,9 @@ img {
 	color: var(--accent-color);
 }
 
-.nav-link.current::after {
+.nav-link.current::after,
+.nav-link:hover::after,
+.nav-link:focus::after {
 	content: "";
 	display: block;
 	width: 100%;
