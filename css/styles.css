@@ -6,6 +6,7 @@
 	--dark-background-color: #2f303a;
 	--light-background-color: #f5f4fa;
 	--main-background-color: #ffffff;
+	--main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -34,7 +35,6 @@ img {
 .container {
 	margin: 0 auto;
 	width: 1200px; /* 1170px + 15px left + 15px right */
-	/* outline: 2px solid red; */
 	padding-right: 15px;
 	padding-left: 15px;
 }
@@ -136,7 +136,7 @@ img {
 
 	position: relative;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--main-transition);
 }
 
 .nav-link:hover,
@@ -173,7 +173,7 @@ img {
 	align-items: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--main-transition);
 }
 
 .contacts-link:hover,
@@ -187,26 +187,10 @@ img {
 	fill: var(--icon-color);
 }
 
-/* .header-mail-link::before {
-	content: "";
-	width: 16px;
-	height: 12px;
-	background-color: black;
-	background-image: url(../img/contacts-icons.svg#icon-mail);
-	background-size: contain;
-}
-.header-tel-link::before {
-	content: "";
-	width: 10px;
-	height: 16px;
-	background-color: black;
-	background-image: url(../img/smartphone.svg);
-	background-size: contain;
-} */
-
 /* ------------main------------ */
 
 /* ------------hero------------ */
+
 .hero {
 	text-align: center;
 
@@ -236,7 +220,6 @@ img {
 
 	max-width: 696px;
 	margin-bottom: 30px;
-	outline: 2px solid aqua;
 }
 
 .hero-btn {
@@ -251,7 +234,7 @@ img {
 	height: 50px;
 	padding: 10px 32px;
 	border-radius: 4px;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--main-transition);
 }
 
 .hero-btn:hover,
@@ -397,7 +380,7 @@ img {
 	align-items: center;
 	justify-content: center;
 	color: #afb1b8;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--main-transition), background-color var(--main-transition);
 }
 
 .team-soc-link:hover,
@@ -437,7 +420,7 @@ img {
 	align-items: center;
 	justify-content: center;
 	color: #afb1b8;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--main-transition), border-color var(--main-transition);
 }
 
 .clients-link:hover,
@@ -492,7 +475,7 @@ img {
 	font-size: 14px;
 	line-height: 1.71;
 	color: rgba(255, 255, 255, 0.6);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--main-transition);
 }
 
 .footer-contacts-link:hover,
@@ -532,7 +515,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--main-transition);
 }
 
 .footer-soc-link:hover,
@@ -574,8 +557,7 @@ img {
 	padding: 6px 22px;
 	border-radius: 4px;
 	height: 38px;
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--main-transition), background-color var(--main-transition), box-shadow var(--main-transition);
 }
 
 .filter-btn:hover,
@@ -598,7 +580,7 @@ img {
 }
 
 .portfolio-link {
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow var(--main-transition);
 }
 
 .portfolio-link:hover,
@@ -617,14 +599,14 @@ img {
 	color: var(--light-text-color);
 
 	position: absolute;
-	top: 0;
+	top: 1px;
 	left: 0;
 	height: 100%;
 	padding: 63px 24px;
 	background: rgba(33, 150, 243, 0.9);
 
 	transform: translateY(100%);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform var(--main-transition);
 	overflow: auto;
 }
 
@@ -665,7 +647,7 @@ img {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.2);
 
-	transition: opacity 250ms linear, visibility 250ms;
+	transition: opacity var(--main-transition), visibility 250ms;
 }
 
 .modal {
@@ -680,7 +662,7 @@ img {
 	border-radius: 4px;
 
 	transform: translate(-50%, -50%) scale(1);
-	transition: transform 500ms linear, min-height 500ms linear;
+	transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), min-height 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
