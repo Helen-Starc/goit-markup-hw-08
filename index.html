@@ -63,7 +63,7 @@
 			<section class="hero">
 				<div class="container">
 					<h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-					<button class="hero-btn btn" type="button">Замовити послугу</button>
+					<button class="hero-btn btn" type="button" data-modal-open>Замовити послугу</button>
 				</div>
 			</section>
 			<!-- benefits -->
@@ -124,6 +124,7 @@
 					<ul class="workflow-list list">
 						<li class="workflow-item">
 							<img class="workflow-photo" src="img/workflow1.jpg" alt="людина пише код за комп'ютером" width="370" />
+							<p class="workflow-photo-description">Десктопні додатки</p>
 						</li>
 						<li class="workflow-item">
 							<img
@@ -132,6 +133,7 @@
 								alt="людина працює над мобільним додатком"
 								width="370"
 							/>
+							<p class="workflow-photo-description">Мобільні додатки</p>
 						</li>
 						<li class="workflow-item">
 							<img
@@ -140,6 +142,7 @@
 								alt="людина тримає планшет з відкритою палітрою"
 								width="370"
 							/>
+							<p class="workflow-photo-description">Дизайнерські рішення</p>
 						</li>
 					</ul>
 				</div>
@@ -395,5 +398,17 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button type="button" class="modal-close btn" data-modal-close>
+					<svg class="modal-svg" width="18" height="18">
+						<use href="./img/icons.svg#icon-modal-close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
