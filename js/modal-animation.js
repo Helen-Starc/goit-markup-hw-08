@@ -1,8 +1,9 @@
 // Animation repeat
 
 let modal = document.querySelector(".modal");
+let herobtn = document.querySelector(".hero-btn");
 
-modal.addEventListener("click", function () {
+herobtn.addEventListener("click", function () {
 	modal.classList.add("modal-animation");
 });
 
