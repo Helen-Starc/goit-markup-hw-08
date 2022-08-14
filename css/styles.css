@@ -694,7 +694,7 @@ img {
 
 /* Класс, который будет добавляться к .modal скриптом modal-animation.js при клике на .hero-btn*/
 .modal-animation {
-	animation: rotateY 1500ms linear 500ms;
+	animation: rotateY 1500ms linear 400ms;
 }
 
 .modal-close {
