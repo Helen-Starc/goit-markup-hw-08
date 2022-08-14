@@ -1,4 +1,4 @@
-// Animation repeat
+// Анимация при повторном клике на кнопку
 
 let modal = document.querySelector(".modal");
 let herobtn = document.querySelector(".hero-btn");
