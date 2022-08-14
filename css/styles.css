@@ -676,6 +676,7 @@ img {
 	/* transform: translate(-50%, -50%) scale(1); */
 	transform: scale(1);
 	transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), width 500ms cubic-bezier(0.4, 0, 0.2, 1);
+	animation: rotateY-first 2000ms reverse linear 1000ms;
 }
 
 .modal-animation {
@@ -707,6 +708,28 @@ img {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+}
+
+@keyframes rotateY-first {
+	0% {
+		transform: perspective(2000px) rotateY(0deg);
+	}
+
+	25% {
+		transform: perspective(2000px) rotateY(-10deg);
+	}
+
+	50% {
+		transform: perspective(2000px) rotateY(0deg);
+	}
+
+	75% {
+		transform: perspective(2000px) rotateY(10deg);
+	}
+
+	100% {
+		transform: perspective(2000px) rotateY(0deg);
+	}
 }
 
 @keyframes rotateY {
