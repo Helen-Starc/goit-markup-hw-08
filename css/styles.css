@@ -655,7 +655,7 @@ img {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.2);
 
-	/* transition: opacity 500ms var(--function), visibility 500ms var(--function); */
+	transition: opacity 500ms var(--function);
 }
 
 /* Добавляется скриптом к бэкдропу */
@@ -663,7 +663,7 @@ img {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
-	transition: opacity 2500ms var(--function), visibility 2500ms var(--function);
+	transition: opacity 500ms var(--function), visibility 500ms var(--function);
 }
 
 .modal {
@@ -689,7 +689,7 @@ img {
 
 /* Добавляется скриптом к модалке */
 .modal-animation {
-	animation: rotateY 1500ms linear 400ms;
+	animation: rotateY 1300ms linear 400ms;
 }
 
 .modal-close {
@@ -709,15 +709,20 @@ img {
 }
 
 .modal-content {
-	width: 448px;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	max-width: 448px;
 
 	transform: scale(1);
-	transform-origin: left;
-	transition: transform 500ms var(--function) 100ms;
+	transform-origin: center;
+	transition: transform 300ms var(--function) 200ms, opacity 300ms var(--function) 200ms;
 }
 
 .backdrop.is-hidden .modal-content {
 	transform: scale(0);
+	opacity: 0;
+	transition: transform 300ms var(--function);
 }
 
 .modal-title {
