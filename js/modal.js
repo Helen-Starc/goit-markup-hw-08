@@ -1,4 +1,5 @@
-//Добавляет и удаляет .is-hidden в .modal при открытии-закрытии
+// Добавляет и удаляет .is-hidden и .modal-animation на .backdrop и
+// .modal при откртии - закрытии
 (() => {
 	const refs = {
 		openModalBtn: document.querySelector("[data-modal-open]"),

@@ -658,8 +658,7 @@ img {
 	transition: opacity 500ms var(--function);
 }
 
-/* добавляется к .backdrop при загрузке и клике 
-на .modal-close и удаляться при клике на .hero-btn*/
+/* Добавляется скриптом к бэкдропу */
 .is-hidden {
 	opacity: 0;
 	visibility: hidden;
@@ -687,8 +686,7 @@ img {
 	transition: width 500ms var(--function);
 }
 
-/* добавляется к .modal при клике на .hero-btn
-и удаляется по окончании анимации */
+/* Добавляется скриптом к модалке */
 .modal-animation {
 	animation: rotateY 1500ms linear 400ms;
 }
