@@ -658,34 +658,27 @@ img {
 	transition: opacity 500ms var(--function);
 }
 
+/* добавляется к .backdrop при загрузке и клике 
+на .modal-close и удаляться при клике на .hero-btn*/
 .is-hidden {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
 }
 
-.modal-scene {
+.modal {
 	width: 528px;
 	min-height: 581px;
-
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.modal {
-	width: 100%;
-	min-height: 100%;
 	background: var(--main-background-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 	padding: 40px;
 
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 50%;
+	left: 50%;
 
+	transform: translate(-50%, -50%);
 	transition: width 500ms var(--function);
 }
 
@@ -693,7 +686,8 @@ img {
 	width: 0;
 }
 
-/* Класс, который будет добавляться к .modal скриптом modal-animation.js при клике на .hero-btn*/
+/* добавляется к .modal при клике на .hero-btn
+и удаляется по окончании анимации */
 .modal-animation {
 	animation: rotateY 1500ms linear 400ms;
 }
@@ -743,22 +737,22 @@ img {
 
 @keyframes rotateY {
 	0% {
-		transform: perspective(1500px) rotateY(0deg);
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
 	}
 
 	25% {
-		transform: perspective(1500px) rotateY(15deg);
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(15deg);
 	}
 
 	50% {
-		transform: perspective(1500px) rotateY(0deg);
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
 	}
 
 	75% {
-		transform: perspective(1500px) rotateY(-10deg);
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(-10deg);
 	}
 
 	100% {
-		transform: perspective(1500px) rotateY(0deg);
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
 	}
 }
