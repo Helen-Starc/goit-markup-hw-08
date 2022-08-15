@@ -684,6 +684,7 @@ img {
 
 .backdrop.is-hidden .modal {
 	width: 0;
+	transition: width 500ms var(--function);
 }
 
 /* добавляется к .modal при клике на .hero-btn

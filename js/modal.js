@@ -4,34 +4,14 @@
 		openModalBtn: document.querySelector("[data-modal-open]"),
 		closeModalBtn: document.querySelector("[data-modal-close]"),
 		modal: document.querySelector("[data-modal]"),
+		backdrop: document.querySelector("[data-backdrop]"),
 	};
 
 	refs.openModalBtn.addEventListener("click", toggleModal);
 	refs.closeModalBtn.addEventListener("click", toggleModal);
 
 	function toggleModal() {
-		refs.modal.classList.toggle("is-hidden");
-	}
-})();
-
-// Добавляет .modal-animation в .modal при клике на
-//.hero-btn и удаляет при окончании анимации
-(() => {
-	const refs = {
-		modal: document.querySelector(".modal"),
-		herobtn: document.querySelector(".hero-btn"),
-	};
-
-	refs.herobtn.addEventListener("click", toggleModal);
-
-	function toggleModal() {
+		refs.backdrop.classList.toggle("is-hidden");
 		refs.modal.classList.toggle("modal-animation");
-	}
-	// Отслеживаем окончание анимации
-	refs.modal.addEventListener("animationend", AnimationHandler, false);
-
-	function AnimationHandler() {
-		// Удаляем класс с анимацией
-		refs.modal.classList.remove("modal-animation");
 	}
 })();
