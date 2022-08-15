@@ -655,7 +655,7 @@ img {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.2);
 
-	transition: opacity 500ms var(--function);
+	transition: opacity 500ms var(--function), visibility 500ms var(--function);
 }
 
 /* Добавляется скриптом к бэкдропу */
@@ -663,6 +663,7 @@ img {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	transition: opacity 2500ms var(--function), visibility 2500ms var(--function);
 }
 
 .modal {
@@ -708,11 +709,11 @@ img {
 }
 
 .modal-content {
-	width: 448px;
+	max-width: 448px;
 
 	transform: scale(1);
 	transform-origin: left;
-	transition: transform 500ms var(--function) 100ms;
+	transition: transform 400ms var(--function) 100ms;
 }
 
 .backdrop.is-hidden .modal-content {
