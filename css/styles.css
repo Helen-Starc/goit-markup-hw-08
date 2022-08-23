@@ -556,12 +556,9 @@ img {
 	margin-bottom: 20px;
 }
 
-.footer-email-flexwrap {
+.footer-email-form {
 	display: flex;
 	gap: 12px;
-}
-
-.footer-email-form {
 }
 
 .footer-email-input {
@@ -579,6 +576,14 @@ img {
 	background: transparent;
 	transition: outline-color var(--duration) var(--function);
 }
+
+/* .footer-email-input:not(:focus):not(:placeholder-shown):valid {
+	background-color: #3ceb9617;
+}
+
+.footer-email-input:not(:focus):not(:placeholder-shown):invalid {
+	background-color: #eb3c3c1e;
+} */
 
 .footer-email-input:focus {
 	outline-color: var(--accent-color);
