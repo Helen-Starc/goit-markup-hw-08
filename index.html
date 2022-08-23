@@ -396,32 +396,106 @@
 						</li>
 					</ul>
 				</div>
+				<!-- email input -->
+				<div class="footer-email-wrap">
+					<label for="footer-email" class="footer-email-title">Підпишіться на розсилку</label>
+					<div class="footer-email-flexwrap">
+						<form class="footer-email-form" action="javascript:void(0);">
+							<input class="footer-email-input" id="footer-email" type="email" name="user-email" placeholder="E-mail" />
+						</form>
+						<button class="footer-submit-btn btn" type="submit">
+							Підписатися
+							<svg class="footer-send-icon" width="24" height="24">
+								<use href="./img/icons.svg#icon-send"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
 			</div>
 		</footer>
 
 		<!-- modal -->
 		<div class="backdrop is-hidden" data-backdrop>
-			<div class="modal-scene">
-				<div class="modal" data-modal>
-					<button type="button" class="modal-close btn" data-modal-close>
-						<svg class="modal-svg" width="18" height="18">
-							<use href="./img/icons.svg#icon-modal-close"></use>
-						</svg>
-					</button>
-					<div class="modal-content">
-						<p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-						<p class="modal-text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laboriosam consequatur omnis enim
-							quaerat consequuntur illum laudantium error nostrum minima est nobis, quasi ab, quisquam magnam non
-							numquam natus tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laboriosam
-							consequatur omnis enim quaerat consequuntur illum laudantium error nostrum minima est nobis, quasi ab,
-							quisquam magnam non numquam natus tempora.
-						</p>
-					</div>
+			<div class="modal" data-modal>
+				<button type="button" class="modal-close btn" data-modal-close>
+					<svg class="modal-svg" width="18" height="18">
+						<use href="./img/icons.svg#icon-modal-close"></use>
+					</svg>
+				</button>
+				<div class="modal-content">
+					<b class="modal-title">Залиште свої дані, ми вам передзвонимо</b>
+					<form class="modal-form" action="javascript:void(0);">
+						<!-- form-inputs -->
+						<ul class="form-list list">
+							<!-- name -->
+							<li class="input-field-item">
+								<label for="user-name" class="form-label">Ім'я</label>
+								<div class="input-wrap">
+									<input class="form-input" id="user-name" type="text" name="user-name" placeholder=" " />
+									<svg class="input-icon" width="18" height="18">
+										<use href="./img/icons.svg#icon-form-person"></use>
+									</svg>
+								</div>
+							</li>
+							<!-- tel -->
+							<li class="input-field-item">
+								<label for="user-tel" class="form-label">Телефон</label>
+								<div class="input-wrap">
+									<input
+										class="form-input"
+										id="user-tel"
+										type="tel"
+										name="user-tel"
+										minlength="10"
+										placeholder=" "
+										required
+									/>
+									<svg class="input-icon" width="18" height="18">
+										<use href="./img/icons.svg#icon-form-phone"></use>
+									</svg>
+								</div>
+							</li>
+							<!-- email -->
+							<li class="input-field-item">
+								<label for="user-email" class="form-label">Пошта</label>
+								<div class="input-wrap">
+									<input class="form-input" id="user-email" type="email" name="user-email" placeholder=" " required />
+									<svg class="input-icon" width="18" height="18">
+										<use href="./img/icons.svg#icon-form-email"></use>
+									</svg>
+								</div>
+							</li>
+							<!-- feedback -->
+							<li class="input-field-item">
+								<label for="feedback" class="form-label">Коментар</label>
+								<textarea class="form-feedback" id="feedback" name="feedback" placeholder="Введіть текст"></textarea>
+							</li>
+						</ul>
+						<!-- checkbox -->
+						<div class="check-field">
+							<input
+								type="checkbox"
+								name="user-policy"
+								value="true"
+								class="input-check visually-hidden"
+								id="user-policy"
+							/>
+							<label for="user-policy" class="check-text">
+								<span
+									><svg class="check-icon" width="16" height="15">
+										<use href="./img/icons.svg#icon-check"></use></svg
+								></span>
+								Погоджуюся з розсилкою та приймаю <a href="#" class="check-link"> Умови договору</a></label
+							>
+						</div>
+						<!-- submit -->
+						<div class="submit-wrap">
+							<button type="submit" class="form-submit btn">Відправити</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
-
 		<script src="./js/modal.js"></script>
 	</body>
 </html>
