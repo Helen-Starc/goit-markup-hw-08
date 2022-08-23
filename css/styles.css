@@ -824,6 +824,7 @@ img {
 }
 
 .form-label {
+	font-family: "Roboto";
 	font-size: 12px;
 	line-height: 1.17;
 	letter-spacing: 0.01em;
@@ -853,11 +854,11 @@ img {
 }
 
 .form-input:not(:focus):not(:placeholder-shown):valid {
-	background-color: #3cebdd3b;
+	background-color: #3ceb9617;
 }
 
 .form-input:not(:focus):not(:placeholder-shown):invalid {
-	background-color: #eb3c3c3b;
+	background-color: #eb3c3c1e;
 }
 
 .input-icon {
@@ -943,13 +944,12 @@ img {
 	fill: #ffffff;
 }
 
-.submit-wrap {
+.modal-submit-wrap {
 	text-align: center;
 }
 
-.form-submit {
+.modal-form-submit {
 	font-weight: 700;
-	font-size: 16px;
 	line-height: 1.87;
 	color: var(--light-text-color);
 	text-align: center;
@@ -965,17 +965,15 @@ img {
 	transition: background-color var(--duration) var(--function), box-shadow var(--duration) var(--function);
 }
 
-.form-submit:hover,
-.form-submit:focus {
+.modal-form-submit:hover,
+.modal-form-submit:focus {
 	background-color: #188ce8;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* .modal-text {
-	font-size: 14px;
-	line-height: 1.71;
-	color: #757575;
-} */
+.modal-form:invalid .modal-form-submit {
+	pointer-events: none;
+}
 
 /* ------------animations------------ */
 
