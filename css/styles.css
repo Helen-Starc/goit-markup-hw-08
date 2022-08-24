@@ -858,8 +858,7 @@ img {
 }
 
 .form-input:focus + .input-icon,
-.form-input:hover + .input-icon,
-.input-icon:focus {
+.form-input:hover + .input-icon {
 	fill: var(--accent-color);
 }
 
