@@ -885,7 +885,6 @@ img {
 
 .check-field {
 	margin-bottom: 30px;
-	cursor: pointer;
 }
 .input-check {
 }
@@ -894,9 +893,12 @@ img {
 	font-size: 14px;
 	line-height: 1.71;
 	color: var(--description-text-color);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	cursor: pointer;
 }
 
 .check-text span {
