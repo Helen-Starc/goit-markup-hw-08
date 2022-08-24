@@ -591,6 +591,10 @@ img {
 	background-color: #188ce8;
 }
 
+.footer-email-form:invalid .footer-submit-btn {
+	pointer-events: none;
+}
+
 .footer-send-icon {
 	fill: currentColor;
 }
