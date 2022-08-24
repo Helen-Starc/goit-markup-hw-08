@@ -834,8 +834,8 @@ img {
 	transition: outline var(--duration) var(--function);
 }
 
-.form-input:hover {
-	outline-color: #2196f3;
+.outline {
+	outline: 1px solid var(--accent-color);
 }
 
 .form-input:focus,
@@ -864,10 +864,6 @@ img {
 .form-input:hover + .input-icon,
 .input-icon:focus {
 	fill: var(--accent-color);
-}
-
-.outline {
-	outline: 1px solid var(--accent-color);
 }
 
 .form-feedback {
