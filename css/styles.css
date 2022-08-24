@@ -871,6 +871,8 @@ img {
 
 	resize: none;
 	cursor: pointer;
+
+	transition: border var(--duration) var(--function);
 }
 
 .form-feedback:placeholder-shown {
