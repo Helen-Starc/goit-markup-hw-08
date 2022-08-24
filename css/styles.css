@@ -885,6 +885,7 @@ img {
 
 .check-field {
 	margin-bottom: 30px;
+	cursor: pointer;
 }
 .input-check {
 }
