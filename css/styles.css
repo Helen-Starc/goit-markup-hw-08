@@ -202,7 +202,7 @@ img {
 
 	max-width: 1600px;
 	padding-top: 200px;
-	padding-bottom: 280px;
+	padding-bottom: 200px;
 	margin: 0 auto;
 	background-color: #c4c4c4;
 	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
@@ -769,8 +769,13 @@ img {
 	top: 8px;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.modal-svg {
+	fill: currentColor;
+	transition: fill var(--duration) var(--function);
+}
+
+.modal-close:hover .modal-svg,
+.modal-close:focus .modal-svg {
 	fill: var(--accent-color);
 }
 
@@ -890,6 +895,7 @@ img {
 	color: var(--description-text-color);
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .check-text span {
