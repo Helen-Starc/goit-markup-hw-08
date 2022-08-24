@@ -834,10 +834,6 @@ img {
 	transition: border var(--duration) var(--function);
 }
 
-.outline {
-	border: 1px solid var(--accent-color);
-}
-
 .form-input:focus,
 .form-feedback:focus {
 	outline-color: var(--accent-color);
@@ -994,4 +990,10 @@ img {
 	100% {
 		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
 	}
+}
+
+/* ------------доп класс для ховера на инпутах------------ */
+
+.outline {
+	border: 1px solid var(--accent-color);
 }
