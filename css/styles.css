@@ -558,7 +558,8 @@ img {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 4px;
 	background: transparent;
-	transition: outline-color var(--duration) var(--function), outline var(--duration) var(--function);
+	cursor: pointer;
+	transition: outline-color var(--duration) var(--function), border var(--duration) var(--function);
 }
 
 .footer-email-input:focus {
