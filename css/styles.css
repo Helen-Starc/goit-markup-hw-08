@@ -526,13 +526,11 @@ img {
 /* ------------footer-email------------ */
 
 .footer-email-wrap {
-	position: absolute;
-	right: 0;
-	top: 12px;
+	margin-left: auto;
+	padding-top: 12px;
 }
 
 .footer-email-title {
-	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
@@ -844,9 +842,11 @@ img {
 	top: 50%;
 	transform: translateY(-50%);
 	fill: #212121;
+	transition: fill var(--duration) var(--function);
 }
 
-.form-input:focus + .input-icon {
+.form-input:focus + .input-icon,
+.form-input:hover + .input-icon {
 	fill: var(--accent-color);
 }
 
