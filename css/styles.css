@@ -823,6 +823,10 @@ img {
 	cursor: pointer;
 }
 
+.form-input:hover {
+	outline-color: #2196f3;
+}
+
 .form-input:focus,
 .form-feedback:focus {
 	outline-color: var(--accent-color);
@@ -846,7 +850,9 @@ img {
 }
 
 .form-input:focus + .input-icon,
-.form-input:hover + .input-icon {
+.form-input:hover + .input-icon,
+.input-icon:focus,
+.input-icon:hover {
 	fill: var(--accent-color);
 }
 
