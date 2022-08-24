@@ -860,9 +860,12 @@ img {
 
 .form-input:focus + .input-icon,
 .form-input:hover + .input-icon,
-.input-icon:focus,
-.input-icon:hover {
+.input-icon:focus {
 	fill: var(--accent-color);
+}
+
+.outline {
+	outline: 1px solid var(--accent-color);
 }
 
 .form-feedback {
