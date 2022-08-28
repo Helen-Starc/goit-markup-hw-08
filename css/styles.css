@@ -555,15 +555,20 @@ img {
 	letter-spacing: 0.03em;
 	color: rgba(255, 255, 255, 0.6);
 
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	outline: 1px solid rgba(255, 255, 255, 0.3);
+	border: transparent;
 	border-radius: 4px;
 	background: transparent;
 	cursor: pointer;
-	transition: outline-color var(--duration) var(--function), border var(--duration) var(--function);
+	transition: outline-color var(--duration) var(--function), outline var(--duration) var(--function);
 }
 
 .footer-email-input:focus {
 	outline-color: var(--accent-color);
+}
+
+.footer-email-input:hover {
+	outline: 2px solid var(--accent-color);
 }
 
 .footer-submit-btn {
@@ -590,10 +595,6 @@ img {
 .footer-submit-btn:hover,
 .footer-submit-btn:focus {
 	background-color: #188ce8;
-}
-
-.footer-email-form:invalid .footer-submit-btn {
-	pointer-events: none;
 }
 
 .footer-send-icon {
@@ -826,13 +827,21 @@ img {
 .form-input {
 	width: 100%;
 	height: 40px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
 	padding-left: 42px;
 	padding-right: 12px;
+
+	border: transparent;
+	border-radius: 4px;
+	outline: 1px solid rgba(33, 33, 33, 0.2);
+
 	cursor: pointer;
 
-	transition: border var(--duration) var(--function);
+	transition: outline var(--duration) var(--function), outline-color var(--duration) var(--function);
+}
+
+.form-input:hover,
+.form-feedback:hover {
+	outline: 2px solid var(--accent-color);
 }
 
 .form-input:focus,
@@ -853,7 +862,9 @@ img {
 	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
+
 	fill: #212121;
+
 	transition: fill var(--duration) var(--function);
 }
 
@@ -865,14 +876,16 @@ img {
 .form-feedback {
 	width: 100%;
 	height: 120px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
 	padding: 12px 16px;
+
+	border: transparent;
+	border-radius: 4px;
+	outline: 1px solid rgba(33, 33, 33, 0.2);
 
 	resize: none;
 	cursor: pointer;
 
-	transition: border var(--duration) var(--function);
+	transition: outline var(--duration) var(--function), outline-color var(--duration) var(--function);
 }
 
 .form-feedback:placeholder-shown {
@@ -992,10 +1005,4 @@ img {
 	100% {
 		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
 	}
-}
-
-/* ------------доп класс для ховера на инпутах------------ */
-
-.outline {
-	border: 2px solid var(--accent-color);
 }
