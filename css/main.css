@@ -706,20 +706,18 @@ body {
     transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
   }
 }
-.filter-wrap {
+.portfolio__filter {
   margin-bottom: 50px;
 }
 
-.portfolio-filter {
+.filter {
   display: flex;
   justify-content: center;
 }
-
-.filter-item:not(:last-child) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
-
-.filter-btn {
+.filter__btn {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -734,41 +732,33 @@ body {
   cursor: pointer;
   transition: color var(--duration) var(--function), background-color var(--duration) var(--function), box-shadow var(--duration) var(--function);
 }
-
-.filter-btn:hover,
-.filter-btn:focus {
+.filter__btn:hover, .filter__btn:focus {
   color: var(--light-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-list {
+.product-card {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-
-.portfolio-item {
+.product-card__item {
   /* calc((100% - кол-во_зазоров_в_строке * значение_
   одного_зазора) / кол-во_элементов_в_строке) */
   flex-basis: calc((100% - 60px) / 3);
 }
-
-.portfolio-link {
+.product-card__link {
   transition: box-shadow var(--duration) var(--function);
 }
-
-.portfolio-link:hover,
-.portfolio-link:focus {
+.product-card__link:hover, .product-card__link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-.project-img-wrap {
+.product-card__img-wrap {
   position: relative;
   overflow: hidden;
 }
-
-.project-overlay-text {
+.product-card__overlay-text {
   font-size: 18px;
   line-height: 1.56;
   color: var(--light-text-color);
@@ -778,31 +768,27 @@ body {
   height: 100%;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
+  overflow: auto;
   transform: translateY(100%);
   transition: transform var(--duration) var(--function);
-  overflow: auto;
 }
-
-.portfolio-link:hover .project-overlay-text {
+.product-card__link:hover .product-card__overlay-text {
   transform: translateY(0);
 }
-
-.portfolio-list .item-wrap {
+.product-card__desc-wrap {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
-
-.project-title {
+.product-card__title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--dark-text-color);
   margin-bottom: 4px;
 }
-
-.project-category {
+.product-card__description {
   font-size: 16px;
   line-height: 1.87;
   color: var(--description-text-color);
