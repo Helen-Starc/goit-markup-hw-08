@@ -1,0 +1,26 @@
+/* Добавляется скриптом к модалке */
+.modal-animation {
+	animation: rotateY 1300ms linear 400ms;
+}
+
+@keyframes rotateY {
+	0% {
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
+	}
+
+	25% {
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(15deg);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
+	}
+
+	75% {
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(-10deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
+	}
+}

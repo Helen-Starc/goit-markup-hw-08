@@ -2,28 +2,31 @@
 	padding-top: 0;
 }
 
-.workflow-list {
+.photo-list {
 	display: flex;
-}
 
-.workflow-item {
-	position: relative;
-}
+	&__item {
+		position: relative;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
 
-.workflow-photo-description {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
-	text-align: center;
-	text-transform: uppercase;
-	color: var(--light-text-color);
+	&__description {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		text-align: center;
+		text-transform: uppercase;
+		color: var(--light-text-color);
 
-	padding: 27px 24px;
-	width: 100%;
-	min-height: 70px;
-	background: rgba(47, 48, 58, 0.8);
+		padding: 27px 24px;
+		width: 100%;
+		min-height: 70px;
+		background: rgba(47, 48, 58, 0.8);
 
-	position: absolute;
-	bottom: 0;
-	left: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
 }

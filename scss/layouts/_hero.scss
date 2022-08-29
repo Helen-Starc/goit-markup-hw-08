@@ -5,45 +5,33 @@
 	padding-top: 200px;
 	padding-bottom: 200px;
 	margin: 0 auto;
+
 	background-color: #c4c4c4;
 	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-}
 
-.hero .container {
-	padding-right: 252px;
-	padding-left: 252px;
-}
+	&__container {
+		padding-right: 252px;
+		padding-left: 252px;
+	}
 
-.hero-title {
-	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.36;
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
-	color: var(--light-text-color);
+	&__title {
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.36;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--light-text-color);
 
-	max-width: 696px;
-	margin-bottom: 30px;
-}
+		max-width: 696px;
+		margin-bottom: 30px;
+	}
 
-.hero-btn {
-	font-weight: 700;
-	line-height: 1.87;
-	letter-spacing: 0.06em;
-	color: var(--light-text-color);
-	background-color: var(--accent-color);
-
-	min-width: 216px;
-	height: 50px;
-	padding: 10px 32px;
-	border-radius: 4px;
-	transition: background-color var(--duration) var(--function);
-}
-
-.hero-btn:hover,
-.hero-btn:focus {
-	background-color: #188ce8;
+	&__btn {
+		min-width: 216px;
+		height: 50px;
+		padding: 10px 32px;
+	}
 }

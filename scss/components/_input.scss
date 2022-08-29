@@ -1,0 +1,15 @@
+.input {
+	border: transparent;
+	border-radius: 4px;
+
+	cursor: pointer;
+
+	transition: outline-color var(--duration) var(--function), outline var(--duration) var(--function);
+
+	&:focus {
+		outline-color: var(--accent-color);
+	}
+	&:hover {
+		outline: 2px solid var(--accent-color);
+	}
+}
