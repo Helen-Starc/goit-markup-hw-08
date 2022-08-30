@@ -13,9 +13,7 @@
 	}
 
 	&__description {
-		font-weight: 700;
-		font-size: 14px;
-		line-height: 1.14;
+		@include font(700, 14px, 1.14, null);
 		text-align: center;
 		text-transform: uppercase;
 		color: var(--light-text-color);
