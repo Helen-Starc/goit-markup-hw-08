@@ -1,7 +1,7 @@
 .header {
 	border-bottom: var(--header-border) solid #ececec;
 
-	&__container,
+	&__flex-wrap,
 	&__nav-wrap {
 		display: flex;
 		align-items: center;

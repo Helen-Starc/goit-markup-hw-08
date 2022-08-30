@@ -393,7 +393,7 @@ body {
 .header {
   border-bottom: var(--header-border) solid #ececec;
 }
-.header__container, .header__nav-wrap {
+.header__flex-wrap, .header__nav-wrap {
   display: flex;
   align-items: center;
 }
@@ -700,7 +700,6 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: center;
 }
 .email__icon {
   fill: currentColor;
