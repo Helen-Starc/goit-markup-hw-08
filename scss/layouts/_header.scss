@@ -1,7 +1,13 @@
 .header {
 	border-bottom: var(--header-border) solid #ececec;
 
-	&__flex-wrap,
+	&__flex-wrap {
+		//  display: flex;
+		//  align-items: center;
+
+		display: none;
+	}
+
 	&__nav-wrap {
 		display: flex;
 		align-items: center;
@@ -13,6 +19,14 @@
 
 	&__contacts {
 		margin-left: auto;
+	}
+
+	&__mob-nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		min-height: 60px;
 	}
 }
 

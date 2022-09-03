@@ -1,10 +1,22 @@
 .logos {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 30px;
 
 	&__item {
-		width: 170px;
+		/* calc((100% - кол-во_зазоров_в_строке * значение_
+	одного_зазора) / кол-во_элементов_в_строке) */
+		flex-basis: calc((100% - 30px) / 2);
 		height: 92px;
+
+		@media screen and (min-width: 768px) {
+			flex-basis: calc((100% - 2 * 30px) / 3);
+		}
+
+		@media screen and (min-width: 1200px) {
+			flex-basis: calc((100% - 5 * 30px) / 6);
+			flex-wrap: nowrap;
+		}
 	}
 
 	&__link {

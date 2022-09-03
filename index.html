@@ -56,12 +56,29 @@
 					</li>
 				</ul>
 			</div>
+			<!-- mob-nav-version -->
+			<div class="header__mob-nav container">
+				<!-- logo -->
+				<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--dark">Studio</span></a>
+				<!-- mob-menu-button -->
+				<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+					<svg width="40" height="40">
+						<use class="menu-btn__icon-open" href="./img/icons.svg#icon-menu-open"></use>
+						<use class="menu-btn__icon-close" href="./img/icons.svg#icon-menu-close"></use>
+					</svg>
+				</button>
+			</div>
+			<!-- mob-menu -->
+			<div class="menu-container" id="menu-container" data-menu>
+				<div class="navigation"></div>
+				<div class="contacts"></div>
+			</div>
 		</header>
 
 		<main>
 			<!-- hero -->
 			<section class="hero">
-				<div class="hero__container container">
+				<div class="container">
 					<h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
 					<button class="hero__btn btn" type="button" data-modal-open>Замовити послугу</button>
 				</div>
@@ -69,7 +86,6 @@
 			<!-- benefits -->
 			<section class="benefits section">
 				<div class="container">
-					<!-- invisible header -->
 					<h2 class="visually-hidden">Особливості</h2>
 					<ul class="pic-list list">
 						<li class="pic-list__item">
@@ -143,7 +159,7 @@
 					<h2 class="section-title">Наша команда</h2>
 					<ul class="cards list">
 						<li class="cards__item">
-							<img src="img/member1.jpg" alt="фото Ігоря Дем'яненко" width="270" />
+							<img src="img/member1.jpg" alt="фото Ігоря Дем'яненко" width="450" height="460" />
 							<div class="cards__wrap">
 								<h3 class="cards__title">Ігор Дем'яненко</h3>
 								<p class="cards__description" lang="en">Product Designer</p>
@@ -177,7 +193,7 @@
 							</div>
 						</li>
 						<li class="cards__item">
-							<img src="img/member2.jpg" alt="фото Ольги Рєпіної" width="270" />
+							<img src="img/member2.jpg" alt="фото Ольги Рєпіної" width="450" height="460" />
 							<div class="cards__wrap">
 								<h3 class="cards__title">Ольга Рєпіна</h3>
 								<p class="cards__description" lang="en">Frontend Developer</p>
@@ -211,7 +227,7 @@
 							</div>
 						</li>
 						<li class="cards__item">
-							<img src="img/member3.jpg" alt="фото Миколи Тарасова" width="270" />
+							<img src="img/member3.jpg" alt="фото Миколи Тарасова" width="450" height="460" />
 							<div class="cards__wrap">
 								<h3 class="cards__title">Микола Тарасов</h3>
 								<p class="cards__description" lang="en">Marketing</p>
@@ -245,7 +261,7 @@
 							</div>
 						</li>
 						<li class="cards__item">
-							<img src="img/member4.jpg" alt="фото Михайла Єрмакова" width="270" />
+							<img src="img/member4.jpg" alt="фото Михайла Єрмакова" width="450" height="460" />
 							<div class="cards__wrap">
 								<h3 class="cards__title">Михайло Єрмаков</h3>
 								<p class="cards__description" lang="en">UI Designer</p>
@@ -333,58 +349,60 @@
 			</section>
 		</main>
 
-		<footer class="footer">
+		<footer class="footer section">
 			<div class="container footer__flex-wrap">
-				<!-- contacts and address -->
-				<div class="footer__address-wrap">
-					<!-- logo -->
-					<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--light">Studio</span></a>
-					<!-- address & contacts -->
-					<address class="address footer__address">
-						<p class="address__text">м. Київ, пр-т Лесі Українки, 26</p>
-						<ul class="address__list list">
-							<li class="address__item">
-								<a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+				<div class="footer__tablet-wrap">
+					<!-- contacts and address -->
+					<div class="footer__address-wrap">
+						<!-- logo -->
+						<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--light">Studio</span></a>
+						<!-- address & contacts -->
+						<address class="address footer__address">
+							<p class="address__text">м. Київ, пр-т Лесі Українки, 26</p>
+							<ul class="address__list list">
+								<li class="address__item">
+									<a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+								</li>
+								<li class="address__item">
+									<a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+								</li>
+							</ul>
+						</address>
+					</div>
+					<!-- social links -->
+					<div class="footer__soc-wrap">
+						<b class="footer__soc-text">Приєднуйтесь</b>
+						<ul class="socials list">
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="address__item">
-								<a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
 							</li>
 						</ul>
-					</address>
-				</div>
-				<!-- social links -->
-				<div class="footer__soc-wrap">
-					<b class="footer__soc-text">Приєднуйтесь</b>
-					<ul class="socials list">
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-instagram"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-twitter"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-facebook"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-linkedin"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
+					</div>
 				</div>
 				<!-- email input -->
 				<div class="email footer__email">
@@ -497,7 +515,7 @@
 				</div>
 			</div>
 		</div>
-
+		<script src="./js/menu.js"></script>
 		<script src="./js/modal.js"></script>
 	</body>
 </html>

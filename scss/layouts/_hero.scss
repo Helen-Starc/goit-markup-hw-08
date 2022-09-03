@@ -1,9 +1,9 @@
 .hero {
 	text-align: center;
 
-	max-width: 1600px;
-	padding-top: 200px;
-	padding-bottom: 200px;
+	min-height: 400px;
+	padding-top: 118px;
+	padding-bottom: 118px;
 	margin: 0 auto;
 
 	background-color: #c4c4c4;
@@ -12,23 +12,40 @@
 	background-position: center;
 	background-size: cover;
 
-	&__container {
-		padding-right: 252px;
-		padding-left: 252px;
+	@media screen and (min-width: 1200px) {
+		min-height: 600px;
+		padding-top: 200px;
+		padding-bottom: 200px;
 	}
 
 	&__title {
-		@include font(900, 44px, 1.36, 0.06em);
+		@include font(900, 26px, 1.62, 0.06em);
 		text-transform: uppercase;
 		color: var(--light-text-color);
 
 		max-width: 696px;
 		margin-bottom: 30px;
+		margin-right: auto;
+		margin-left: auto;
+
+		@media screen and (min-width: 768px) {
+			max-width: 360px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			max-width: 696px;
+			@include font(900, 44px, 1.36, 0.06em);
+		}
 	}
 
 	&__btn {
-		min-width: 216px;
+		min-width: 200px;
 		height: 50px;
-		padding: 10px 32px;
+		padding: 10px 24px;
+		margin: 0 auto;
+
+		@media screen and (min-width: 1200px) {
+			min-width: 216;
+		}
 	}
 }

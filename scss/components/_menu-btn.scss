@@ -1,0 +1,29 @@
+.menu-btn {
+	background-color: transparent;
+	border: 1px solid transparent;
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+	.menu-btn {
+		display: none;
+	}
+}
+
+.menu-btn__icon-open {
+}
+
+.menu-btn.is-open .menu-btn__icon-open {
+	display: none;
+}
+
+.menu-btn__icon-close {
+	display: none;
+}
+
+.menu-btn.is-open .menu-btn__icon-close {
+	display: block;
+}

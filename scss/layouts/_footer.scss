@@ -1,23 +1,42 @@
 .footer {
 	background-color: var(--dark-background-color);
 
-	padding-top: 60px;
-	padding-bottom: 60px;
-
 	&__flex-wrap {
-		display: flex;
+		text-align: center;
+	}
+
+	&__tablet-wrap {
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			margin-bottom: 60px;
+		}
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	&__address-wrap {
-		margin-right: 70px;
+		@media screen and (max-width: 767px) {
+			margin-bottom: 60px;
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			margin-left: 75px;
+		}
 	}
 
 	&__address {
-		margin-top: 20px;
+		@media screen and (max-width: 767px) {
+			margin-top: 20px;
+		}
 	}
 
 	&__soc-wrap {
-		padding-top: 12px;
+		// padding-top: 12px;
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			margin-right: 75px;
+		}
 	}
 
 	&__soc-text {
@@ -30,8 +49,11 @@
 	}
 
 	&__email {
-		margin-left: auto;
-		padding-top: 12px;
+		// margin-left: auto;
+		// padding-top: 12px;
+		@media screen and (max-width: 1199px) {
+			margin-top: 60px;
+		}
 	}
 }
 
@@ -42,11 +64,11 @@
 		@include font(null, 14px, 1.71, null);
 		color: var(--light-text-color);
 
-		margin-bottom: 9px;
+		margin-bottom: 8px;
 	}
 
 	&__item:not(:last-child) {
-		margin-bottom: 9px;
+		margin-bottom: 8px;
 	}
 
 	&__link {
@@ -73,8 +95,8 @@
 	}
 
 	&__form {
-		display: flex;
-		gap: 12px;
+		// display: flex;
+		// gap: 12px;
 	}
 
 	&__input {
@@ -83,10 +105,20 @@
 		padding: 15px 16px;
 		background-color: transparent;
 
+		margin-bottom: 20px;
+
 		@include font(null, 16px, 1.25, 0.03em);
 		color: rgba(255, 255, 255, 0.6);
 
 		outline: 1px solid rgba(255, 255, 255, 0.3);
+
+		@media screen and (min-width: 768px) {
+			width: 450px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			width: 358px;
+		}
 	}
 
 	&__btn {
@@ -98,6 +130,9 @@
 		display: flex;
 		gap: 10px;
 		align-items: center;
+
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	&__icon {

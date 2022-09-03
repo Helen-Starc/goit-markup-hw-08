@@ -6,6 +6,7 @@
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.2);
+	overflow-y: auto;
 
 	transition: opacity 500ms var(--function), visibility 500ms var(--function);
 }

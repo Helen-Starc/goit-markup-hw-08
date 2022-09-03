@@ -1,8 +1,28 @@
 .pic-list {
-	display: flex;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		flex-wrap: nowrap;
+	}
+
+	&__item {
+		@media screen and (min-width: 768px) {
+			flex-basis: calc((100% - 30px) / 2);
+		}
+
+		@media screen and (min-width: 1200px) {
+			flex-basis: calc((100% - 3 * 30px) / 4);
+		}
+	}
 
 	&__item:not(:last-child) {
-		margin-right: 30px;
+		@media screen and (max-width: 767px) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__svg-wrap {
@@ -23,6 +43,10 @@
 		text-transform: uppercase;
 
 		margin-bottom: 10px;
+
+		@media screen and (max-width: 767px) {
+			text-align: center;
+		}
 	}
 
 	&__description {
