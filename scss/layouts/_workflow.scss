@@ -1,5 +1,6 @@
 .workflow {
 	display: none;
+
 	padding-top: 0;
 }
 
@@ -8,6 +9,7 @@
 
 	&__item {
 		position: relative;
+
 		&:not(:last-child) {
 			margin-right: 30px;
 		}

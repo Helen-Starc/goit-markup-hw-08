@@ -58,6 +58,23 @@
 					</li>
 				</ul>
 			</div>
+			<!-- mob-nav-version -->
+			<div class="header__mob-nav container">
+				<!-- logo -->
+				<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--dark">Studio</span></a>
+				<!-- mob-menu-button -->
+				<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+					<svg width="40" height="40">
+						<use class="menu-btn__icon-open" href="./img/icons.svg#icon-menu-open"></use>
+						<use class="menu-btn__icon-close" href="./img/icons.svg#icon-menu-close"></use>
+					</svg>
+				</button>
+			</div>
+			<!-- mob-menu -->
+			<div class="menu-container" id="menu-container" data-menu>
+				<div class="navigation"></div>
+				<div class="contacts"></div>
+			</div>
 		</header>
 
 		<main>
@@ -91,7 +108,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-2.jpg" alt="постер з баскетболістами" width="370" />
@@ -106,7 +123,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-3.jpg" alt="логотип ресторану" width="370" />
@@ -121,7 +138,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-4.jpg" alt="чорні безпроводні навушники" width="370" />
@@ -136,7 +153,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-5.jpg" alt="дві коробки" width="370" />
@@ -151,7 +168,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-6.jpg" alt="відкритий на моніторі веб-сайт" width="370" />
@@ -167,7 +184,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-7.jpg" alt="книга" width="370" />
@@ -182,7 +199,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-8.jpg" alt="лейбл" width="370" />
@@ -198,7 +215,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="portfolio-item">
+						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
 									<img src="img/portfolio-9.jpg" alt="відкритий на ноутбуці додаток" width="370" />
@@ -219,58 +236,60 @@
 			</section>
 		</main>
 
-		<footer class="footer">
+		<footer class="footer section">
 			<div class="container footer__flex-wrap">
-				<!-- contacts and address -->
-				<div class="footer__address-wrap">
-					<!-- logo -->
-					<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--light">Studio</span></a>
-					<!-- address & contacts -->
-					<address class="address footer__address">
-						<p class="address__text">м. Київ, пр-т Лесі Українки, 26</p>
-						<ul class="address__list list">
-							<li class="address__item">
-								<a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+				<div class="footer__tablet-wrap">
+					<!-- contacts and address -->
+					<div class="footer__address-wrap">
+						<!-- logo -->
+						<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--light">Studio</span></a>
+						<!-- address & contacts -->
+						<address class="address footer__address">
+							<p class="address__text">м. Київ, пр-т Лесі Українки, 26</p>
+							<ul class="address__list list">
+								<li class="address__item">
+									<a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+								</li>
+								<li class="address__item">
+									<a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+								</li>
+							</ul>
+						</address>
+					</div>
+					<!-- social links -->
+					<div class="footer__soc-wrap">
+						<b class="footer__soc-text">Приєднуйтесь</b>
+						<ul class="socials list">
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
 							</li>
-							<li class="address__item">
-								<a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="socials__item">
+								<a href="" class="socials__link socials__link--dark-bg link">
+									<svg class="socials__icon" width="20" height="20">
+										<use href="./img/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
 							</li>
 						</ul>
-					</address>
-				</div>
-				<!-- social links -->
-				<div class="footer__soc-wrap">
-					<b class="footer__soc-text">Приєднуйтесь</b>
-					<ul class="socials list">
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-instagram"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-twitter"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-facebook"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a href="" class="socials__link socials__link--dark-bg link">
-								<svg class="socials__icon" width="20" height="20">
-									<use href="./img/icons.svg#icon-linkedin"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
+					</div>
 				</div>
 				<!-- email input -->
 				<div class="email footer__email">
@@ -287,5 +306,7 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="./js/menu.js"></script>
 	</body>
 </html>
