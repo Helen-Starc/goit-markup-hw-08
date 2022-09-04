@@ -1020,7 +1020,8 @@ body.modal-open {
   }
 }
 .product-card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   transition: box-shadow var(--duration) var(--function);
 }
@@ -1030,7 +1031,6 @@ body.modal-open {
 .product-card__img-wrap {
   position: relative;
   overflow: hidden;
-  height: 294px;
 }
 .product-card__overlay-text {
   font-size: 18px;
@@ -1057,7 +1057,7 @@ body.modal-open {
 }
 @media screen and (min-width: 768px) {
   .product-card__desc-wrap {
-    height: calc(100% - 294px);
+    flex-grow: 1;
   }
 }
 .product-card__title {

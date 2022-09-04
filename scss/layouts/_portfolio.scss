@@ -69,8 +69,10 @@
 	}
 
 	&__link {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		height: 100%;
+
 		transition: box-shadow var(--duration) var(--function);
 
 		&:hover,
@@ -82,7 +84,6 @@
 	&__img-wrap {
 		position: relative;
 		overflow: hidden;
-		height: 294px;
 	}
 
 	&__overlay-text {
@@ -112,7 +113,7 @@
 		border-bottom: 1px solid #eeeeee;
 
 		@media screen and (min-width: 768px) {
-			height: calc(100% - 294px);
+			flex-grow: 1;
 		}
 	}
 
