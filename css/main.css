@@ -651,7 +651,7 @@ body.menu-open {
     line-height: 1.71;
   }
 }
-.form__check-svg-wrap {
+.form__check-text .form__check-svg-wrap {
   width: 16px;
   height: 15px;
   border: 2px solid var(--dark-text-color);
@@ -662,11 +662,11 @@ body.menu-open {
   justify-content: center;
   transition: background-color var(--duration) var(--function), border-color var(--duration) var(--function);
 }
-.form__check-input:checked + .form__check-svg-wrap {
+.form__check-input:checked + .form__check-text .form__check-svg-wrap {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
-.form__check-input:focus + .form__check-svg-wrap, .form__check-input:hover + .form__check-svg-wrap {
+.form__check-input:focus + .form__check-text .form__check-svg-wrap, .form__check-input:hover + .form__check-text .form__check-svg-wrap {
   border-color: var(--accent-color);
 }
 .form__check-icon {
