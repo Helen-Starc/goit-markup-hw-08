@@ -144,29 +144,20 @@ body.menu-open {
   }
 }
 
-@media screen and (max-width: 479px) {
-  .menu-backdrop {
-    padding: 38px 30px;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .menu-backdrop {
-    padding: 48px 40px;
-  }
-}
 @media screen and (max-width: 767px) {
   .menu-backdrop {
     display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--main-background-color);
-    position: fixed;
-    top: 0;
-    left: 0;
   }
   .menu-backdrop.is-open {
     display: block;
     z-index: 200;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-background-color);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -179,8 +170,14 @@ body.menu-open {
   width: 100%;
   margin: 0 auto;
 }
+@media screen and (max-width: 479px) {
+  .menu-container {
+    padding: 38px 30px;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .menu-container {
+    padding: 48px 40px;
     width: 480px;
   }
 }
