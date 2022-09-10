@@ -472,11 +472,15 @@ body.menu-open {
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   overflow-y: auto;
-  padding: 93px 15px;
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
   transition: opacity 500ms var(--function), visibility 500ms var(--function);
+}
+@media screen and (max-width: 479px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
 }
 
 /* Добавляется скриптом к бэкдропу */
@@ -566,7 +570,10 @@ body.menu-open {
   transition: transform 500ms var(--function), opacity 500ms var(--function);
 }
 
-.form__item {
+.form__list {
+  margin-bottom: 20px;
+}
+.form__item:not(:last-child) {
   margin-bottom: 10px;
 }
 .form__label {
@@ -644,7 +651,7 @@ body.menu-open {
     line-height: 1.71;
   }
 }
-.form__check-text span {
+.form__check-svg-wrap {
   width: 16px;
   height: 15px;
   border: 2px solid var(--dark-text-color);
@@ -655,11 +662,11 @@ body.menu-open {
   justify-content: center;
   transition: background-color var(--duration) var(--function), border-color var(--duration) var(--function);
 }
-.form__check-input:checked + .form__check-text span {
+.form__check-input:checked + .form__check-svg-wrap {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
-.form__check-input:focus + .form__check-text span, .form__check-input:hover + .form__check-text span {
+.form__check-input:focus + .form__check-svg-wrap, .form__check-input:hover + .form__check-svg-wrap {
   border-color: var(--accent-color);
 }
 .form__check-icon {
@@ -1148,6 +1155,12 @@ body.menu-open {
 @media screen and (min-width: 1200px) {
   .footer__email {
     padding-top: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
