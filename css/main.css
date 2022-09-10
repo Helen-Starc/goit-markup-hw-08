@@ -1124,10 +1124,8 @@ body.menu-open {
     margin-left: 75px;
   }
 }
-@media screen and (max-width: 767px) {
-  .footer__address {
-    margin-top: 20px;
-  }
+.footer__address {
+  margin-top: 20px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__soc-wrap {
