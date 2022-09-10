@@ -3,7 +3,7 @@
 	@include font(700, 24px, 1.17, null);
 	color: var(--accent-color);
 
-	@media screen and (min-width: 1200px) {
+	@include desctop {
 		@include font(null, 26px, 1.19, null);
 	}
 }

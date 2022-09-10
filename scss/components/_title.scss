@@ -4,7 +4,7 @@
 
 	margin-bottom: 30px;
 
-	@media screen and (min-width: 1200px) {
+	@include desctop {
 		margin-bottom: 50px;
 		@include font(null, 36px, 1.17, null);
 	}

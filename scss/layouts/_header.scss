@@ -1,122 +1,36 @@
 .header {
 	border-bottom: var(--header-border) solid #ececec;
 
-	&__flex-wrap {
-		display: none;
+	@media screen and (max-width: 767px) {
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+	}
 
-		@media screen and (min-width: 768px) {
-			display: flex;
-			align-items: center;
+	&__menu {
+		@media screen and (max-width: 767px) {
+			margin-bottom: 80px;
 		}
 	}
 
-	&__nav-wrap {
-		display: flex;
-		align-items: center;
+	&__cont-soc-wrap {
+	}
+
+	&__soc-list {
+		@media screen and (max-width: 767px) {
+			margin-top: 64px;
+		}
 	}
 
 	&__navigation {
-		margin-left: 88px;
-
-		@media screen and (min-width: 1200px) {
-			margin-left: 92px;
-		}
-	}
-
-	&__contacts {
-		margin-left: auto;
-	}
-
-	&__mob-nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		min-height: 60px;
-
-		@media screen and (min-width: 768px) {
-			display: none;
-		}
-	}
-}
-
-.navigation {
-	display: flex;
-	align-items: center;
-
-	&__item:not(:last-child) {
-		margin-right: 50px;
-	}
-	&__link {
-		@include font(500, 14px, 1.14, 0.02em);
-		color: var(--dark-text-color);
-
-		padding: 32px 2px;
-		position: relative;
-
-		transition: color var(--duration) var(--function);
-
-		&.current {
-			color: var(--accent-color);
+		@include tablet {
+			display: flex;
+			align-items: center;
+			gap: 87px;
 		}
 
-		&:hover,
-		&:focus {
-			color: var(--accent-color);
+		@include desctop {
+			gap: 92px;
 		}
-
-		&.current::after,
-		&:hover::after,
-		&:focus::after {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 4px;
-			background-color: currentColor;
-			border-radius: 2px;
-
-			position: absolute;
-			bottom: calc(0px - var(--header-border));
-			left: 0;
-		}
-	}
-}
-
-.contacts {
-	@media screen and (min-width: 1200px) {
-		display: flex;
-		gap: 30px;
-	}
-
-	&__item:not(:last-child) {
-		@media screen and (min-width: 768px) and (max-width: 1199px) {
-			margin-bottom: 10px;
-		}
-	}
-
-	&__link {
-		@include font(500, 14px, 1.14, 0.02em);
-		color: var(--description-text-color);
-
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-
-		transition: color var(--duration) var(--function);
-
-		@media screen and (min-width: 1200px) {
-			padding-top: 32px;
-			padding-bottom: 32px;
-		}
-
-		&:hover,
-		&:focus {
-			color: var(--accent-color);
-		}
-	}
-
-	&__mail-icon,
-	&__tel-icon {
-		--icon-color: currentColor;
-		fill: var(--icon-color);
 	}
 }

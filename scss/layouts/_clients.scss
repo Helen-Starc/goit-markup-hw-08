@@ -9,11 +9,11 @@
 		flex-basis: calc((100% - 30px) / 2);
 		height: 92px;
 
-		@media screen and (min-width: 768px) {
+		@include tablet {
 			flex-basis: calc((100% - 2 * 30px) / 3);
 		}
 
-		@media screen and (min-width: 1200px) {
+		@include desctop {
 			flex-basis: calc((100% - 5 * 30px) / 6);
 			flex-wrap: nowrap;
 		}

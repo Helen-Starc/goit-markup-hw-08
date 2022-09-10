@@ -26,54 +26,55 @@
 
 	<body>
 		<header class="header">
-			<div class="container header__flex-wrap">
-				<nav class="header__nav-wrap">
+			<!-- navigation -->
+			<div class="container">
+				<nav class="header__navigation navigation">
 					<!-- logo -->
 					<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--dark">Studio</span></a>
-					<!-- header navigation -->
-					<ul class="navigation header__navigation list">
-						<li class="navigation__item"><a class="navigation__link link" href="./index.html">Студія</a></li>
-						<li class="navigation__item">
-							<a class="navigation__link link current" href="./portfolio.html">Портфоліо</a>
-						</li>
-						<li class="navigation__item"><a class="navigation__link link" href="#">Контакти</a></li>
-					</ul>
+					<!-- mob-menu-button -->
+					<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+						<svg class="menu-btn__svg" width="40" height="40" aria-label="Кнопка мобільного меню">
+							<use class="menu-btn__icon-open" href="./img/icons.svg#icon-menu-open"></use>
+							<use class="menu-btn__icon-close" href="./img/icons.svg#icon-menu-close"></use>
+						</svg>
+					</button>
+					<!-- menu-content -->
+					<div class="menu-backdrop" data-menu-backdrop>
+						<div class="menu-container" id="menu-container" data-menu>
+							<!-- header navigation -->
+							<ul class="menu header__menu list">
+								<li class="menu__item"><a class="menu__link link" href="./index.html">Студія</a></li>
+								<li class="menu__item"><a class="menu__link link current" href="./portfolio.html">Портфоліо</a></li>
+								<li class="menu__item"><a class="menu__link link" href="#">Контакти</a></li>
+							</ul>
+							<!-- header contacts -->
+							<ul class="contacts header__contacts list">
+								<li class="contacts__item">
+									<a class="contacts__link-tel link" href="tel:+380961111111">
+										<svg class="contacts__tel-icon" width="10" height="16">
+											<use href="./img/icons.svg#icon-smartphone"></use></svg
+										>+38 096 111 11 11
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a class="contacts__link-mail link" href="mailto:info@devstudio.com">
+										<svg class="contacts__mail-icon" width="16" height="12">
+											<use href="./img/icons.svg#icon-mail"></use>
+										</svg>
+										info@devstudio.com</a
+									>
+								</li>
+							</ul>
+							<!-- soc-links -->
+							<ul class="soc-list header__soc-list list">
+								<li class="soc-list__item"><a class="soc-list__link link" href="#">Instagram</a></li>
+								<li class="soc-list__item"><a class="soc-list__link link" href="#">Twitter</a></li>
+								<li class="soc-list__item"><a class="soc-list__link link" href="#">Facebook</a></li>
+								<li class="soc-list__item"><a class="soc-list__link link" href="#">LinkedIn</a></li>
+							</ul>
+						</div>
+					</div>
 				</nav>
-				<!-- header contacts -->
-				<ul class="contacts header__contacts list">
-					<li class="contacts__item">
-						<a class="contacts__link link" href="mailto:info@devstudio.com">
-							<svg class="contacts__mail-icon" width="16" height="12">
-								<use href="./img/icons.svg#icon-mail"></use>
-							</svg>
-							info@devstudio.com</a
-						>
-					</li>
-					<li class="contacts__item">
-						<a class="contacts__link link" href="tel:+380961111111">
-							<svg class="contacts__tel-icon" width="10" height="16">
-								<use href="./img/icons.svg#icon-smartphone"></use></svg
-							>+38 096 111 11 11
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!-- mob-nav-version -->
-			<div class="header__mob-nav container">
-				<!-- logo -->
-				<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--dark">Studio</span></a>
-				<!-- mob-menu-button -->
-				<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-					<svg width="40" height="40">
-						<use class="menu-btn__icon-open" href="./img/icons.svg#icon-menu-open"></use>
-						<use class="menu-btn__icon-close" href="./img/icons.svg#icon-menu-close"></use>
-					</svg>
-				</button>
-			</div>
-			<!-- mob-menu -->
-			<div class="menu-container" id="menu-container" data-menu>
-				<div class="navigation"></div>
-				<div class="contacts"></div>
 			</div>
 		</header>
 
@@ -96,7 +97,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-1.jpg" alt="відкритий на ноубуці веб-сайт" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-1-desc.jpg 1x, ./img/product-1-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-1-tab.jpg 1x, ./img/product-1-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-1-mob.jpg 1x, ./img/product-1-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-1-mob.jpg" alt="відкритий на ноубуці веб-сайт" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -111,7 +126,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-2.jpg" alt="постер з баскетболістами" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-2-desc.jpg 1x, ./img/product-2-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-2-tab.jpg 1x, ./img/product-2-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-2-mob.jpg 1x, ./img/product-2-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-2-mob.jpg" alt="постер з баскетболістами" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -126,7 +155,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-3.jpg" alt="логотип ресторану" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-3-desc.jpg 1x, ./img/product-3-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-3-tab.jpg 1x, ./img/product-3-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-3-mob.jpg 1x, ./img/product-3-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-3-mob.jpg" alt="логотип ресторану" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -141,7 +184,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-4.jpg" alt="чорні безпроводні навушники" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-4-desc.jpg 1x, ./img/product-4-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-4-tab.jpg 1x, ./img/product-4-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-4-mob.jpg 1x, ./img/product-4-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-4-mob.jpg" alt="чорні безпроводні навушники" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -156,7 +213,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-5.jpg" alt="дві коробки" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-5-desc.jpg 1x, ./img/product-5-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-5-tab.jpg 1x, ./img/product-5-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-5-mob.jpg 1x, ./img/product-5-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-5-mob.jpg" alt="дві коробки" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -171,7 +242,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-6.jpg" alt="відкритий на моніторі веб-сайт" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-6-desc.jpg 1x, ./img/product-6-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-6-tab.jpg 1x, ./img/product-6-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-6-mob.jpg 1x, ./img/product-6-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-6-mob.jpg" alt="відкритий на моніторі веб-сайт" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -187,7 +272,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-7.jpg" alt="книга" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-7-desc.jpg 1x, ./img/product-7-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-7-tab.jpg 1x, ./img/product-7-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-7-mob.jpg 1x, ./img/product-7-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-7-mob.jpg" alt="книга" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -202,7 +301,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-8.jpg" alt="лейбл" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-8-desc.jpg 1x, ./img/product-8-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-8-tab.jpg 1x, ./img/product-8-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-8-mob.jpg 1x, ./img/product-8-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-8-mob.jpg" alt="лейбл" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -218,7 +331,21 @@
 						<li class="product-card__item">
 							<a href="#" class="product-card__link link">
 								<div class="product-card__img-wrap">
-									<img src="img/portfolio-9.jpg" alt="відкритий на ноутбуці додаток" width="370" />
+									<picture>
+										<source
+											srcset="./img/product-9-desc.jpg 1x, ./img/product-9-desc-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./img/product-9-tab.jpg 1x, ./img/product-9-tab-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./img/product-9-mob.jpg 1x, ./img/product-9-mob-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./img/product-9-mob.jpg" alt="відкритий на ноутбуці додаток" width="450" height="294" />
+									</picture>
 									<p class="product-card__overlay-text">
 										Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
 										відвідувачу отримати вичерпні відомості про компанію чи приватну особу.

@@ -3,6 +3,10 @@
 	animation: rotateY 1300ms linear 400ms;
 }
 
+.modal-mobile-animation {
+	animation: mobilerotateY 1300ms linear 400ms;
+}
+
 @keyframes rotateY {
 	0% {
 		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
@@ -22,5 +26,27 @@
 
 	100% {
 		transform: translate(-50%, -50%) perspective(1500px) rotateY(0deg);
+	}
+}
+
+@keyframes mobilerotateY {
+	0% {
+		transform: perspective(1500px) rotateY(0deg);
+	}
+
+	25% {
+		transform: perspective(1500px) rotateY(15deg);
+	}
+
+	50% {
+		transform: perspective(1500px) rotateY(0deg);
+	}
+
+	75% {
+		transform: perspective(1500px) rotateY(-10deg);
+	}
+
+	100% {
+		transform: perspective(1500px) rotateY(0deg);
 	}
 }

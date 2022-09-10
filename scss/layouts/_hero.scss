@@ -1,38 +1,51 @@
 .hero {
 	text-align: center;
 
-	min-height: 400px;
+	max-width: 1600px;
 	padding-top: 118px;
 	padding-bottom: 118px;
 	margin: 0 auto;
 
 	background-color: #c4c4c4;
-	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
+	background-image: var(--bg-gradient), url(../img/hero-bg-mob.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	@include retina {
+		background-image: var(--bg-gradient), url("../img/hero-bg-mob-2x.jpg");
+	}
 
-	@media screen and (min-width: 1200px) {
-		min-height: 600px;
+	@include tablet {
+		background-image: var(--bg-gradient), url(../img/hero-bg-tab.jpg);
+		@include retina {
+			background-image: var(--bg-gradient), url("../img/hero-bg-tab-2x.jpg");
+		}
+	}
+
+	@include desctop {
+		background-image: var(--bg-gradient), url(../img/hero-bg-desc.jpg);
+		@include retina {
+			background-image: var(--bg-gradient), url("../img/hero-bg-desc-2x.jpg");
+		}
 		padding-top: 200px;
 		padding-bottom: 200px;
 	}
 
 	&__title {
-		@include font(900, 26px, 1.62, 0.06em);
+		@include font(900, 22px, 1.62, 0.06em);
 		text-transform: uppercase;
 		color: var(--light-text-color);
 
-		max-width: 696px;
+		max-width: 360px;
 		margin-bottom: 30px;
 		margin-right: auto;
 		margin-left: auto;
 
-		@media screen and (min-width: 768px) {
-			max-width: 360px;
+		@include mobile {
+			@include font(900, 26px, 1.62, 0.06em);
 		}
 
-		@media screen and (min-width: 1200px) {
+		@include desctop {
 			max-width: 696px;
 			@include font(900, 44px, 1.36, 0.06em);
 		}
@@ -44,7 +57,7 @@
 		padding: 10px 24px;
 		margin: 0 auto;
 
-		@media screen and (min-width: 1200px) {
+		@include desctop {
 			min-width: 216;
 		}
 	}

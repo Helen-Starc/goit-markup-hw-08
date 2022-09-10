@@ -1,20 +1,20 @@
 .pic-list {
-	@media screen and (min-width: 768px) {
+	@include tablet {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 30px;
 	}
 
-	@media screen and (min-width: 1200px) {
+	@include desctop {
 		flex-wrap: nowrap;
 	}
 
 	&__item {
-		@media screen and (min-width: 768px) {
+		@include tablet {
 			flex-basis: calc((100% - 30px) / 2);
 		}
 
-		@media screen and (min-width: 1200px) {
+		@include desctop {
 			flex-basis: calc((100% - 3 * 30px) / 4);
 		}
 	}

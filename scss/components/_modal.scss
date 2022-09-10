@@ -2,11 +2,20 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 100;
 
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background: rgba(0, 0, 0, 0.2);
 	overflow-y: auto;
+
+	padding-top: 93px;
+	padding-right: 15px;
+	padding-left: 15px;
+
+	opacity: 1;
+	visibility: visible;
+	pointer-events: initial;
 
 	transition: opacity 500ms var(--function), visibility 500ms var(--function);
 }
@@ -20,19 +29,32 @@
 }
 
 .modal {
-	width: 528px;
-	min-height: 581px;
+	width: 100%;
 	background: var(--main-background-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	padding: 40px;
+	padding: 40px 20px;
 
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	position: relative;
 
-	transform: translate(-50%, -50%);
 	transition: width 500ms var(--function), transform 500ms var(--function), opacity 500ms var(--function);
+
+	@include mobile {
+		width: 450px;
+		min-height: 610px;
+		padding: 40px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+
+	@include desctop {
+		width: 528px;
+		min-height: 581px;
+	}
 
 	.backdrop.is-hidden & {
 		transform: scale(0);
@@ -69,12 +91,16 @@
 	}
 
 	&__title {
-		@include font(700, 20px, 1.15, null);
+		@include font(700, 20px, 1.5, null);
 		text-align: center;
 		color: var(--dark-text-color);
 
 		display: block;
 		margin-bottom: 12px;
+
+		@include desctop {
+			@include font(700, 20px, 1.15, null);
+		}
 	}
 }
 
@@ -153,8 +179,12 @@
 		resize: none;
 
 		&:placeholder-shown {
-			@include font(null, 12px, 1.17, 0.01em);
+			@include font(null, 14px, 1.14, 0.01em);
 			color: rgba(117, 117, 117, 0.5);
+
+			@include desctop {
+				@include font(null, 12px, 1.17, 0.01em);
+			}
 		}
 	}
 
@@ -163,7 +193,7 @@
 	}
 
 	&__check-text {
-		@include font(null, 14px, 1.71, null);
+		@include font(null, 12px, 1.17, null);
 		color: var(--description-text-color);
 
 		display: flex;
@@ -171,6 +201,10 @@
 		justify-content: center;
 
 		cursor: pointer;
+
+		@include desctop {
+			@include font(null, 14px, 1.71, null);
+		}
 	}
 
 	&__check-text span {
@@ -208,10 +242,14 @@
 	}
 
 	&__check-link {
-		@include font(null, 14px, 1.71, null);
+		@include font(null, 12px, 1.17, null);
 		color: #2196f3;
 
 		margin-left: 6px;
+
+		@include desctop {
+			@include font(null, 14px, 1.71, null);
+		}
 	}
 }
 

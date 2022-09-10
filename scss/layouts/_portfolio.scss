@@ -14,7 +14,7 @@
 		row-gap: 15px;
 	}
 
-	@media screen and (min-width: 767px) {
+	@include tablet {
 		justify-content: center;
 	}
 
@@ -44,7 +44,7 @@
 }
 
 .product-card {
-	@media screen and (min-width: 767px) {
+	@include tablet {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 30px;
@@ -53,11 +53,11 @@
 	&__item {
 		/* calc((100% - кол-во_зазоров_в_строке * значение_
 	одного_зазора) / кол-во_элементов_в_строке) */
-		@media screen and (min-width: 767px) {
+		@include tablet {
 			flex-basis: calc((100% - 30px) / 2);
 		}
 
-		@media screen and (min-width: 1200px) {
+		@include desctop {
 			flex-basis: calc((100% - 2 * 30px) / 3);
 		}
 
@@ -94,12 +94,24 @@
 		top: 1px;
 		left: 0;
 		height: 100%;
-		padding: 63px 24px;
+		padding: 49px 24px;
 		background: rgba(33, 150, 243, 0.9);
 
 		overflow: auto;
 		transform: translateY(100%);
 		transition: transform var(--duration) var(--function);
+
+		@include mobile {
+			padding: 77px 24px;
+		}
+
+		@include tablet {
+			padding: 49px 24px;
+		}
+
+		@include desctop {
+			padding: 63px 24px;
+		}
 
 		.product-card__link:hover & {
 			transform: translateY(0);
@@ -112,7 +124,7 @@
 		border-right: 1px solid #eeeeee;
 		border-bottom: 1px solid #eeeeee;
 
-		@media screen and (min-width: 768px) {
+		@include tablet {
 			flex-grow: 1;
 		}
 	}

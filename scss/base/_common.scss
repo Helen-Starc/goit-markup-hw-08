@@ -9,12 +9,20 @@ body {
 	padding-top: 60px;
 	padding-bottom: 60px;
 
-	@media screen and (min-width: 1200px) {
+	@include desctop {
 		padding-top: 94px;
 		padding-bottom: 94px;
 	}
 }
 
 body.modal-open {
+	overflow: hidden;
+
+	& .menu-btn {
+		pointer-events: none;
+	}
+}
+
+body.menu-open {
 	overflow: hidden;
 }

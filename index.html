@@ -26,52 +26,58 @@
 
 	<body>
 		<header class="header">
-			<div class="container header__flex-wrap">
-				<nav class="header__nav-wrap">
+			<!-- navigation -->
+			<div class="container">
+				<nav class="header__navigation navigation">
 					<!-- logo -->
 					<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--dark">Studio</span></a>
-					<!-- header navigation -->
-					<ul class="navigation header__navigation list">
-						<li class="navigation__item"><a class="navigation__link link current" href="./index.html">Студія</a></li>
-						<li class="navigation__item"><a class="navigation__link link" href="./portfolio.html">Портфоліо</a></li>
-						<li class="navigation__item"><a class="navigation__link link" href="#">Контакти</a></li>
-					</ul>
+					<!-- mob-menu-button -->
+					<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+						<svg class="menu-btn__svg" width="40" height="40" aria-label="Кнопка мобільного меню">
+							<use class="menu-btn__icon-open" href="./img/icons.svg#icon-menu-open"></use>
+							<use class="menu-btn__icon-close" href="./img/icons.svg#icon-menu-close"></use>
+						</svg>
+					</button>
+					<!-- menu-content -->
+					<div class="menu-backdrop" data-menu-backdrop>
+						<div class="menu-container" id="menu-container" data-menu>
+							<!-- header navigation -->
+							<ul class="menu header__menu list">
+								<li class="menu__item"><a class="menu__link link current" href="./index.html">Студія</a></li>
+								<li class="menu__item"><a class="menu__link link" href="./portfolio.html">Портфоліо</a></li>
+								<li class="menu__item"><a class="menu__link link" href="#">Контакти</a></li>
+							</ul>
+
+							<div class="header__cont-soc-wrap">
+								<!-- header contacts -->
+								<ul class="contacts header__contacts list">
+									<li class="contacts__item">
+										<a class="contacts__link-tel link" href="tel:+380961111111">
+											<svg class="contacts__tel-icon" width="10" height="16">
+												<use href="./img/icons.svg#icon-smartphone"></use></svg
+											>+38 096 111 11 11
+										</a>
+									</li>
+									<li class="contacts__item">
+										<a class="contacts__link-mail link" href="mailto:info@devstudio.com">
+											<svg class="contacts__mail-icon" width="16" height="12">
+												<use href="./img/icons.svg#icon-mail"></use>
+											</svg>
+											info@devstudio.com</a
+										>
+									</li>
+								</ul>
+								<!-- soc-links -->
+								<ul class="soc-list header__soc-list list">
+									<li class="soc-list__item"><a class="soc-list__link link" href="#">Instagram</a></li>
+									<li class="soc-list__item"><a class="soc-list__link link" href="#">Twitter</a></li>
+									<li class="soc-list__item"><a class="soc-list__link link" href="#">Facebook</a></li>
+									<li class="soc-list__item"><a class="soc-list__link link" href="#">LinkedIn</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</nav>
-				<!-- header contacts -->
-				<ul class="contacts header__contacts list">
-					<li class="contacts__item">
-						<a class="contacts__link link" href="mailto:info@devstudio.com">
-							<svg class="contacts__mail-icon" width="16" height="12">
-								<use href="./img/icons.svg#icon-mail"></use>
-							</svg>
-							info@devstudio.com</a
-						>
-					</li>
-					<li class="contacts__item">
-						<a class="contacts__link link" href="tel:+380961111111">
-							<svg class="contacts__tel-icon" width="10" height="16">
-								<use href="./img/icons.svg#icon-smartphone"></use></svg
-							>+38 096 111 11 11
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!-- mob-nav-version -->
-			<div class="header__mob-nav container">
-				<!-- logo -->
-				<a href="./index.html" class="logo link" lang="en">Web<span class="logo__decor--dark">Studio</span></a>
-				<!-- mob-menu-button -->
-				<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-					<svg width="40" height="40">
-						<use class="menu-btn__icon-open" href="./img/icons.svg#icon-menu-open"></use>
-						<use class="menu-btn__icon-close" href="./img/icons.svg#icon-menu-close"></use>
-					</svg>
-				</button>
-			</div>
-			<!-- mob-menu -->
-			<div class="menu-container" id="menu-container" data-menu>
-				<div class="navigation"></div>
-				<div class="contacts"></div>
 			</div>
 		</header>
 
@@ -139,15 +145,33 @@
 					<h2 class="section-title">Чим ми займаємося</h2>
 					<ul class="photo-list list">
 						<li class="photo-list__item">
-							<img src="img/workflow1.jpg" alt="людина пише код за комп'ютером" width="370" />
+							<img
+								srcset="./img/workflow-1-desc.jpg 1x, ./img/workflow-1-desc-2x.jpg 2x"
+								src="./img/workflow-1-desc.jpg"
+								alt="людина пише код за комп'ютером"
+								width="370"
+								height="294"
+							/>
 							<p class="photo-list__description">Десктопні додатки</p>
 						</li>
 						<li class="photo-list__item">
-							<img src="img/workflow2.jpg" alt="людина працює над мобільним додатком" width="370" />
+							<img
+								srcset="./img/workflow-2-desc.jpg 1x, ./img/workflow-2-desc-2x.jpg 2x"
+								src="./img/workflow-2-desc.jpg"
+								alt="людина працює над мобільним додатком"
+								width="370"
+								height="294"
+							/>
 							<p class="photo-list__description">Мобільні додатки</p>
 						</li>
 						<li class="photo-list__item">
-							<img src="img/workflow3.jpg" alt="людина тримає планшет з відкритою палітрою" width="370" />
+							<img
+								srcset="./img/workflow-3-desc.jpg 1x, ./img/workflow-3-desc-2x.jpg 2x"
+								src="./img/workflow-3-desc.jpg"
+								alt="людина тримає планшет з відкритою палітрою"
+								width="370"
+								height="294"
+							/>
 							<p class="photo-list__description">Дизайнерські рішення</p>
 						</li>
 					</ul>
@@ -159,7 +183,22 @@
 					<h2 class="section-title">Наша команда</h2>
 					<ul class="cards list">
 						<li class="cards__item">
-							<img src="img/member1.jpg" alt="фото Ігоря Дем'яненко" width="450" height="460" />
+							<picture>
+								<source
+									srcset="./img/team-img-1-desc.jpg 1x, ./img/team-img-1-desc-2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/team-img-1-tab.jpg 1x, ./img/team-img-1-tab-2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/team-img-1-mob.jpg 1x, ./img/team-img-1-mob-2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/team-img-1-mob.jpg" alt="фото команди" width="450" height="460" />
+							</picture>
+
 							<div class="cards__wrap">
 								<h3 class="cards__title">Ігор Дем'яненко</h3>
 								<p class="cards__description" lang="en">Product Designer</p>
@@ -193,7 +232,22 @@
 							</div>
 						</li>
 						<li class="cards__item">
-							<img src="img/member2.jpg" alt="фото Ольги Рєпіної" width="450" height="460" />
+							<picture>
+								<source
+									srcset="./img/team-img-2-desc.jpg 1x, ./img/team-img-2-desc-2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/team-img-2-tab.jpg 1x, ./img/team-img-2-tab-2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/team-img-2-mob.jpg 1x, ./img/team-img-2-mob-2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/team-img-2-mob.jpg" alt="фото команди" width="450" height="460" />
+							</picture>
+
 							<div class="cards__wrap">
 								<h3 class="cards__title">Ольга Рєпіна</h3>
 								<p class="cards__description" lang="en">Frontend Developer</p>
@@ -227,7 +281,22 @@
 							</div>
 						</li>
 						<li class="cards__item">
-							<img src="img/member3.jpg" alt="фото Миколи Тарасова" width="450" height="460" />
+							<picture>
+								<source
+									srcset="./img/team-img-3-desc.jpg 1x, ./img/team-img-3-desc-2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/team-img-3-tab.jpg 1x, ./img/team-img-3-tab-2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/team-img-3-mob.jpg 1x, ./img/team-img-3-mob-2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/team-img-3-mob.jpg" alt="фото команди" width="450" height="460" />
+							</picture>
+
 							<div class="cards__wrap">
 								<h3 class="cards__title">Микола Тарасов</h3>
 								<p class="cards__description" lang="en">Marketing</p>
@@ -261,7 +330,21 @@
 							</div>
 						</li>
 						<li class="cards__item">
-							<img src="img/member4.jpg" alt="фото Михайла Єрмакова" width="450" height="460" />
+							<picture>
+								<source
+									srcset="./img/team-img-4-desc.jpg 1x, ./img/team-img-4-desc-2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/team-img-4-tab.jpg 1x, ./img/team-img-4-tab-2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/team-img-4-mob.jpg 1x, ./img/team-img-4-mob-2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/team-img-4-mob.jpg" alt="фото команди" width="450" height="460" />
+							</picture>
 							<div class="cards__wrap">
 								<h3 class="cards__title">Михайло Єрмаков</h3>
 								<p class="cards__description" lang="en">UI Designer</p>
